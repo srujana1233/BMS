@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100;1,300;1,700&display=swap" rel="stylesheet');
+
+:root {
+  --selected:rgb(101, 218, 101);
+  --text-color:#777;
+  --white:#fff;
+  --dark:#1c2042;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color:var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  color:var(--white);
+}
+
+.movie-container{
+  margin:20px 0;
+}
+
+.movie-container label{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+select{
+  background-color: var(--white);
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-left:10px;
+  padding: 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.showcase{
+  background-color: rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #fff;
+  list-style: none;
+}
+.showcase li{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin:0 10px;
+  padding: 5px;
+}
+
+.showcase li small{
+  margin-left: 2px;
+}
+
+.seat {
+  background-color: #777;
+  height: 1.2rem;
+  width: 1.5rem;
+  margin:10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.seat.selected {
+  background-color: var(--selected);
+}
+
+.seat.occupied {
+  background-color: rgb(236, 100, 100);
+}
+
+.seat:not(.occupied):hover {
+  cursor:pointer;
+  transform: scale(1.1);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor:default;
+  transform: scale(1);
+}
+
+.seat:nth-of-type(3) {
+  margin-right: 1.5rem;
+}
+
+.seat:nth-last-of-type(3) {
+  margin-left: 1.5rem;
+}
+
+.screen-container{
+  perspective: 680px;
+  margin-bottom: 30px;
+}
+
+.screen {
+  background-color: var(--white);
+  height: 8rem;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+
+.row{
+  display: flex;
+}
+
+p.text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+p span {
+  color: var(--selected);
+}
+
+
+
+
+
+
