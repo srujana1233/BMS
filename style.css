@@ -1,69 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100;1,300;1,700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --selected:rgb(101, 218, 101);
-  --text-color:#777;
-  --white:#fff;
-  --dark:#1c2042;
-
+  --selectedSeats: rgb(109, 179, 107);
+  --gray: #424242;
+  --white: #ffffff;
+  --dark: #0e1129;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} 
 
-html{
+html {
   font-size: 16px;
 }
 
-body{
+body {
   font-family: 'Poppins', sans-serif;
-  background-color:var(--dark);
+  background-color: var(--dark);
+  color: var(--white);
+  /* This next 5 lines are not mandatory in every project but this keeps the lines in center of the screen. */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin: 0;
-  color:var(--white);
+  margin: 0;  
 }
 
+/* 1st div */
 .movie-container{
-  margin:20px 0;
+  margin: 20px 0;
 }
 
 .movie-container label{
   font-size: 1.2rem;
   font-weight: 700;
+  margin-right: 15px;
 }
 
 select{
   background-color: var(--white);
-  border: 0;
+  border: none;
   border-radius: 5px;
   font-size: 1.2rem;
-  margin-left:10px;
   padding: 5px 15px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  -moz-appearance: none; /* replacing some styles we have to write for other files also */
+  -webkit-appearance: none;/* By these two the arrow will be removed in select.*/
   appearance: none;
 }
 
+/* 2nd div */
 .showcase{
-  background-color: rgba(0,0,0,0.1);
-  display: flex;
+  background-color: #090b1b;
+  display:flex;
   justify-content: space-between;
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-radius: 5px;
-  color: #fff;
+  color:var(--white);
   list-style: none;
 }
+
 .showcase li{
   display: flex;
-  align-content: center;
   align-items: center;
-  margin:0 10px;
+  justify-content: center;
+  margin: 0 10px;
   padding: 5px;
 }
 
@@ -71,47 +75,47 @@ select{
   margin-left: 2px;
 }
 
-.seat {
-  background-color: #777;
+.seat{
+  background-color: var(--gray) ;
   height: 1.2rem;
-  width: 1.5rem;
-  margin:10px;
+  width: 1.3rem;
+  margin: 10px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
-.seat.selected {
-  background-color: var(--selected);
+.seat.selected{
+  background-color: var(--selectedSeats);
 }
 
-.seat.occupied {
-  background-color: rgb(236, 100, 100);
-}
-
-.seat:not(.occupied):hover {
-  cursor:pointer;
-  transform: scale(1.1);
-}
-
-.showcase .seat:not(.occupied):hover {
-  cursor:default;
-  transform: scale(1);
-}
-
-.seat:nth-of-type(3) {
-  margin-right: 1.5rem;
-}
-
-.seat:nth-last-of-type(3) {
-  margin-left: 1.5rem;
+.seat.occupied{
+  background-color:rgb(240, 67, 67);
 }
 
 .screen-container{
-  perspective: 680px;
   margin-bottom: 30px;
+  perspective: 500px;
 }
 
-.screen {
+.seat:not(.occupied):hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover{
+  cursor: default;
+  transform: scale(1);
+}
+
+.seat:nth-last-of-type(3){
+  margin-left: 1.5rem;
+}
+
+.seat:nth-of-type(3){
+  margin-left: 1.5rem;
+}
+
+.screen{
   background-color: var(--white);
   height: 8rem;
   width: 100%;
@@ -124,14 +128,16 @@ select{
   display: flex;
 }
 
-p.text {
+p{
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-p span {
-  color: var(--selected);
+p span{
+  color: gold;
 }
+
+
 
 
 

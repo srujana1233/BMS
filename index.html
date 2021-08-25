@@ -4,35 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMS</title>
+  <title>BMS - BMS</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./normalize.css">
 </head>
-<body>
-  <div class= "movie-container">
-    <label for="movie">Select Your Movie</label>
+ <body> <!-- Body has 4 child elements -->
+  <div class="movie-container">
+    <label for="movie">Select Your Favorite Movie</label>
     <select name="movie-name" id="movie">
-      <option value="100">Bahubali-₹200</option>
-      <option value="100">King-₹150</option>
-      <option value="100">Hit-₹300</option>
-      <option value="100">Boss-₹250</option>
-      <option value="100">june-₹350</option>
+      <option value="100">Bahubali - ₹100</option>
+      <option value="150">Don - ₹150</option>
+      <option value="200">King - ₹200</option>
+      <option value="250">NGK - ₹250</option>
+      <option value="300">Gang - ₹300</option>
+      <option value="350">I - ₹350</option>
     </select>
   </div>
   <ul class="showcase">
     <li>
-      <div class ="seat"></div>
+      <div class="seat"></div>
       <small>N/A</small>
     </li>
     <li>
-      <div class ="seat selected"></div>
+      <div class="seat selected"></div>
       <small>Selected</small>
     </li>
     <li>
-      <div class ="seat occupied"></div>
+      <div class="seat occupied"></div>
       <small>Occupied</small>
     </li>
-
   </ul>
   <div class="screen-container">
     <div class="screen"></div>
@@ -42,32 +42,12 @@
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
-      <div class="seat"></div>
-      <div class="seat selected"></div>
-      <div class="seat"></div>
-    </div>
-    <div class="row">
-      <div class="seat"></div>
-      <div class="seat selected"></div>
-      <div class="seat"></div>
-      <div class="seat"></div>
-      <div class="seat"></div>
-      <div class="seat selected"></div>
-      <div class="seat"></div>
-      <div class="seat"></div>
-    </div>
-    <div class="row">
-      <div class="seat"></div>
-      <div class="seat"></div>
-      <div class="seat occupied"></div>
-      <div class="seat"></div>
       <div class="seat occupied"></div>
       <div class="seat"></div>
       <div class="seat"></div>
-      <div class="seat"></div>
     </div>
     <div class="row">
-      <div class="seat "></div>
+      <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat selected"></div>
@@ -79,16 +59,35 @@
     <div class="row">
       <div class="seat"></div>
       <div class="seat"></div>
+      <div class="seat selected"></div>
       <div class="seat"></div>
       <div class="seat occupied"></div>
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat selected"></div>
+      <div class="seat selected"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat selected"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat selected"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
       <div class="seat"></div>
     </div>
   </div>
-  <p class="text">
-    You have selected
+  <p class="text">You have selected 
     <span id="count">0</span> 
     seats for a price of ₹
     <span id="total">0</span>
